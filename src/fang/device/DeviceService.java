@@ -38,7 +38,7 @@ public class DeviceService implements Runnable,IClose{
 	}
 
 	public DeviceService stopService() {
-		this.stoped = stoped;
+		this.stoped = true;
 		return this;
 	}
 
@@ -59,7 +59,7 @@ public class DeviceService implements Runnable,IClose{
 	/**
 	 * start device service
 	 */
-	public void startSmartSwitchService(){
+	public void startService(){
 		new Thread(this).start();
 		new Thread(new DeviceCmdMsgServiceThread(DeviceCmdMsgQueue.getInstance())).start();
 		System.out.println("Device service start");

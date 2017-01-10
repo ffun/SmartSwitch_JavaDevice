@@ -3,7 +3,7 @@ package fang.device;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class DeviceCmdMsgQueue {
-	private static DeviceCmdMsgQueue _Instance = null;
+	private static volatile DeviceCmdMsgQueue _Instance = null;
 	private LinkedBlockingQueue<DeviceCmdMsg> mQueue=null; 
 	
 	private DeviceCmdMsgQueue() {

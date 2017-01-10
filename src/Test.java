@@ -12,7 +12,7 @@ public class Test {
 //			System.out.println("failed decode");
 //		System.out.println("decode success");
 //		deviceMsg.toString();
-		DeviceService.getInstance().startSmartSwitchService();
+		DeviceService.getInstance().startService();
 		
 		while(true){
 			Thread.sleep(2000);
